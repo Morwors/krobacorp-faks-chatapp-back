@@ -10,7 +10,7 @@ public class Room {
     @Id
     public String id;
 
-    public List<User> users;
+    public List<String> users;
 
     @CreatedDate
     public Date createdAt;
@@ -18,12 +18,12 @@ public class Room {
     public Room() {
     }
 
-    public Room(String id, List<User> users) {
+    public Room(String id, List<String> users) {
         this.id = id;
         this.users = users;
     }
 
-    public Room(List<User> users) {
+    public Room(List<String> users) {
         this.users = users;
     }
 
@@ -35,11 +35,11 @@ public class Room {
         this.id = id;
     }
 
-    public List<User> getUsers() {
+    public List<String> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<String> users) {
         this.users = users;
     }
 }

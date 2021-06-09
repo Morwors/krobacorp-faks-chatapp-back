@@ -19,10 +19,11 @@ public class RoomService {
     @Autowired
     RoomRepository roomRepository;
 
-    public String findRoom(List<User> users){
+    public String findRoom(List<String> users){
         try {
+            Collections.sort(users);
             System.out.println("Got array: "+users.toString());
-            List<Room> rooms = roomRepository.findByUsersIn(Collections.singleton(users));
+            List<Room> rooms = roomRepository.findByUsersIn(users);
             System.out.println("Found room/s");
             if(rooms.size()!=0){
                 System.out.println("Room already exists");

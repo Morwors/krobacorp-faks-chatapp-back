@@ -3,6 +3,7 @@ package com.krobacorp.chatapp.controller;
 
 
 import com.krobacorp.chatapp.model.Message;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.util.HtmlUtils;
 
 import org.springframework.stereotype.Controller;
 
+@Slf4j
 @CrossOrigin
 @Controller
 public class MessageSocketController {
